@@ -35,6 +35,23 @@ The MCP server provides two tools:
 - `scrape_page`: Scrape a single web page
 - `crawl_pages`: Crawl multiple pages starting from a URL
 
+#### IDE Configuration (Windsurf)
+To integrate the MCP server with Windsurf or other MCP-compatible IDEs, add the following to your MCP configuration file:
+
+```json
+{
+  "open-scrape": {
+    "args": [
+      "/path/to/openscrape-cli/mcp-server.js",
+      "--stdio"
+    ],
+    "command": "node"
+  }
+}
+```
+
+Replace `/path/to/openscrape-cli/` with the actual installation path of the package on your system.
+
 ## Features
 
 - **Interactive CLI**: User-friendly terminal interface with colorful prompts
