@@ -1,0 +1,39 @@
+{
+  "name": "openscrape-cli",
+  "version": "1.0.0",
+  "description": "Interactive CLI tool for web scraping with Puppeteer. Extract titles, descriptions, links, headings, paragraphs, and full text from any website.",
+  "main": "src/cli.js",
+  "bin": {
+    "openscrape": "src/cli.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/cli.js interactive",
+    "test": "jest"
+  },
+  "keywords": [
+    "scraper",
+    "web",
+    "puppeteer",
+    "cli",
+    "interactive"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^24.38.0",
+    "cheerio": "^1.0.0-rc.12",
+    "yaml": "^2.8.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.6",
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}

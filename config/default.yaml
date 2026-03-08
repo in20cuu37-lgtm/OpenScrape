@@ -1,0 +1,13 @@
+urls:
+  - https://example.com
+selectors:
+  title: h1
+  description: meta[name="description"]
+  links: a[href]
+output:
+  format: md
+  path: ./output/scraped.md
+delay: 1000
+screenshots:
+  enabled: true
+  dir: ./output/screenshots
